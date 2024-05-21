@@ -107,6 +107,7 @@ namespace EjerciciosDePrueba.Clases
 
         public void Display()
         {
+            Console.WriteLine("****************************");
             Console.WriteLine($"Encendido: {encendido}");
             Console.WriteLine($"Modo: {modo}");
 
@@ -138,6 +139,9 @@ namespace EjerciciosDePrueba.Clases
             {
                 Console.WriteLine("El stereo está apagado.");
             }
+            Console.WriteLine("****************************");
+            Console.WriteLine();
+            Console.ReadLine();
         }
 
     }

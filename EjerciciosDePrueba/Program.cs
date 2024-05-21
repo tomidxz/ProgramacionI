@@ -20,30 +20,30 @@ internal class Program
 
     private static void pruebastereo()
     {
-        Stereo mistereo = new Stereo("color", "marca");
-        {
+        Stereo mistereo = new Stereo("negro", "Sony");
+        
 
-            mistereo.presionarBotonEncendido();
+        mistereo.presionarBotonEncendido();
 
-            mistereo.cambiarModo(Modostereo.Radio);
-            mistereo.SetNombreRadio("Radio FM 102.5");
-            mistereo.Display();
+        mistereo.cambiarModo(Modostereo.Radio);
+        mistereo.SetNombreRadio("Radio FM 102.5");
+        mistereo.Display();
 
-            mistereo.cambiarModo(Modostereo.Bluetooth);
-            mistereo.SetNombreCancionBluetooth("Callejeros - Imposible");
-            mistereo.Display();
+        mistereo.cambiarModo(Modostereo.Bluetooth);
+        mistereo.SetNombreCancionBluetooth("Callejeros - Imposible");
+        mistereo.Display();
 
-            mistereo.cambiarModo(Modostereo.Cd);
-            mistereo.SetPistaCD("6 (Soda stereo - de musica ligera)");
-            mistereo.Display();
+        mistereo.cambiarModo(Modostereo.Cd);
+        mistereo.SetPistaCD("6 (Soda stereo - de musica ligera)");
+        mistereo.Display();
 
-            mistereo.cambiarModo(Modostereo.EntradaAuxiliarAudio);
-            mistereo.setEntradaAuxiliarAudio("YSY A - a por todo");
-            mistereo.Display();
+        mistereo.cambiarModo(Modostereo.EntradaAuxiliarAudio);
+        mistereo.setEntradaAuxiliarAudio("YSY A - a por todo");
+        mistereo.Display();
 
-            mistereo.presionarBotonEncendido();
-            mistereo.Display();
-        }
+        mistereo.presionarBotonEncendido();
+        mistereo.Display();
+        
     }
 
     private static void PruebaPavaElectrica()
