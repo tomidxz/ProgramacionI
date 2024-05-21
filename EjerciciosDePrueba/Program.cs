@@ -15,7 +15,27 @@ internal class Program
         //PruebaDeObjetoSplit();
         //PruebaDeObjetoPersona();
         //PruebaPavaElectrica();
-        pruebastereo();
+        //pruebastereo();
+        //pruebaDeClasesAbstractasYHerencia();
+        probarCalculadora();
+    }
+
+    private static void probarCalculadora()
+    {
+        int a = 123;
+        int b = 10;
+        int total = 0;
+        Calculadora calculadora = new Calculadora();
+        calculadora.Sumar(a,b, ref total);
+        Console.WriteLine("La suma total es: "+total);
+
+
+    }
+
+    private static void pruebaDeClasesAbstractasYHerencia()
+    {
+        Gerente juan= new Gerente("Juan Javier","Fernandez");
+        Console.WriteLine( juan.ImprimirDatos());
     }
 
     private static void pruebastereo()
