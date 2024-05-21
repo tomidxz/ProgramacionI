@@ -9,9 +9,9 @@ namespace EjerciciosDePrueba.Enums
     internal enum Modostereo
     {
         EntradaAuxiliarAudio = 1, 
-        Radio=2,
-        Bluetooth = 3,
-        Cd=4,
+        Radio,
+        Bluetooth,
+        Cd,
         
     }
 }
