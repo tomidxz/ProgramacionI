@@ -4,11 +4,12 @@
 using EjerciciosDePrueba.Clases;
 using EjerciciosDePrueba.Enums;
 
-internal class Program
+public class ProgramEjercicios
 {
     private static void Main(string[] args)
     {
         //PedirNombreYSaludar();
+        //Console.WriteLine(TestCalcularDiasDeVida(31,12,3));
         //CalcularDiasDeVida();
         //ImprimirMinimoDe4();
         //CalcularValorPago();
@@ -17,7 +18,24 @@ internal class Program
         //PruebaPavaElectrica();
         //pruebastereo();
         //pruebaDeClasesAbstractasYHerencia();
-        probarCalculadora();
+        //probarCalculadora();
+        //fechasValidasInvalidas();
+        //Console.WriteLine(ControlfechasValidasInvalidas(31,8,2023));
+    }
+
+    public static string TestTipoDeTriangulos(int lado1, int lado2, int lado3)
+    {
+
+        if (lado1 == lado2 && lado1 == lado3 && lado2 == lado3)
+            return "equilátero";
+
+        else if (lado1 == lado2 && lado3 != lado1 && lado3 != lado2 || lado2 == lado3 && lado1 != lado2 && lado1 != lado3
+            || lado1 == lado3 && lado2 != lado1 && lado2 != lado3)
+            return"isóceles";
+
+        else
+            return"escaleno";
+
     }
 
     private static void probarCalculadora()
@@ -203,6 +221,65 @@ internal class Program
         diasDeVida = (años * 365) + (meses * 30) + dias;
 
         Console.WriteLine($"Los días de vida totales son:{diasDeVida}");
+    }
+
+    public static int TestCalcularDiasDeVida(int años,int meses,int dias)
+    {
+        int diasdevida;
+      diasdevida=(años * 365) + (meses * 31) + dias;
+        return diasdevida;
+    }
+
+    private static void fechasValidasInvalidas()
+
+    {
+        //definir variables  
+        int dia, mes, año;
+
+        // Pedir Informacion al usuario
+        Console.WriteLine("Ingrese el día");
+        dia = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Ingrese el mes");
+        mes = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Ingrese el año");
+        año = int.Parse(Console.ReadLine());
+
+
+        if ((dia >= 1 && dia <= 31) && (mes == 1 || mes == 3 ||
+                mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12))
+            Console.WriteLine("Fecha Valida");
+
+        else if ((dia >= 1 && dia <= 30) && (mes == 4 || mes == 6 || mes == 9 || mes == 11))
+            Console.WriteLine("Fecha Valida ");
+
+        else if ((dia == 29) && (mes == 2) && (año % 4 == 0) || (dia >= 1 && dia <= 28) && (mes == 2))
+
+            Console.WriteLine("Fecha Valida ");
+
+        else
+            Console.WriteLine("Fecha Invalida");
+
+    }
+
+
+    public static bool ControlfechasValidasInvalidas(int dia, int mes, int año)
+
+    {
+        
+
+
+        if ((dia >= 1 && dia <= 31) && (mes == 1 || mes == 3 ||
+                mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12))
+               return true;
+
+        else if ((dia >= 1 && dia <= 30) && (mes == 4 || mes == 6 || mes == 9 || mes == 11))
+               return true;
+        else if ((dia == 29) && (mes == 2) && (año % 4 == 0) || (dia >= 1 && dia <= 28) && (mes == 2))
+               return true;
+        else
+               return false;
     }
 
 }
